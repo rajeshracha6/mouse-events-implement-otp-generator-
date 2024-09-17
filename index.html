@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .rajesh{
+            display: inline-block
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="rajesh">
+        <h1>OTP GENARATER</h1>
+        <label for="otpLength">Enter OTP Length</label>
+        <input type="Number" id="otpLength" value="4" min="1"> 
+        <button onclick="genarateotp()">Genarate OTP</button>
+
+    </div>
+    <div >
+        <p id="Displayotp"></p>
+    </div>
+
+    <script>
+        function genarateotp() {
+            const Length = document.getElementById("otpLength").value;
+            let otp="";
+            for(i=0;i < Length;i++){
+            otp +=Math.floor(Math.random() * 10) ;}
+            document.getElementById("Displayotp").innerHTML = `Your OTP is: ${otp}`;
+        }
+
+    </script>
+
+</body>
+</html>
+    
+
